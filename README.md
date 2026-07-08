@@ -1,5 +1,4 @@
 # 🎯 CyberStadium AI – Challenge 4 Submission
-# 🎯 CyberStadium AI – Challenge 4 Submission
 
 <div align="center">
 
