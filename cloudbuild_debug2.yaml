@@ -1,0 +1,4 @@
+steps:
+  - name: 'gcr.io/cloud-builders/gcloud'
+    entrypoint: 'bash'
+    args: ['-lc', 'pwd && ls -la && find . -maxdepth 2 -type f | sort']

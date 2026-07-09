@@ -1,9 +1,13 @@
-# This file specifies files that are *not* uploaded to Google Cloud Platform
+# Exclude build artifacts and dependencies (will be rebuilt in container)
 node_modules/
 .next/
-Dockerfile
 .git/
 .vscode/
 .env
 .env.local
 .DS_Store
+*.log
+*.tgz
+.dockerignore
+cloudbuild*.yaml
+cloudbuild*.log

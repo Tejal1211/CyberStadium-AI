@@ -136,7 +136,9 @@ export default function AICopilot() {
   };
 
   useEffect(() => {
-    terminalEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    if (terminalEndRef.current && typeof terminalEndRef.current.scrollIntoView === "function") {
+      terminalEndRef.current.scrollIntoView({ behavior: "smooth" });
+    }
   }, [messages, activeLogs]);
 
   return (
@@ -228,16 +230,17 @@ export default function AICopilot() {
             <div className="text-slate-600 italic">No telemetry data stream. Trigger a prompt or question to view vector search and sensor pipeline.</div>
           ) : (
             activeLogs.map((log, index) => {
+              const text = typeof log === "string" ? log : String(log ?? "");
               let color = "text-slate-400";
-              if (log.startsWith("SYSTEM:")) color = "text-secondary";
-              else if (log.startsWith("POSITION:")) color = "text-primary";
-              else if (log.startsWith("PATHFINDING:") || log.startsWith("SENSOR_DATA:")) color = "text-accent";
-              else if (log.startsWith("COPILOT:")) color = "text-white font-semibold";
+              if (text.startsWith("SYSTEM:")) color = "text-secondary";
+              else if (text.startsWith("POSITION:")) color = "text-primary";
+              else if (text.startsWith("PATHFINDING:") || text.startsWith("SENSOR_DATA:")) color = "text-accent";
+              else if (text.startsWith("COPILOT:")) color = "text-white font-semibold";
               
               return (
                 <div key={index} className={`flex items-start space-x-2 leading-relaxed ${color}`}>
                   <span className="text-white/20 select-none">&gt;&gt;</span>
-                  <span>{log}</span>
+                  <span>{text}</span>
                 </div>
               );
             })

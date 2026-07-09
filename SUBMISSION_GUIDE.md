@@ -156,6 +156,11 @@ CyberStadium AI
 https://github.com/YOUR_USERNAME/cyberstadium-ai
 ```
 
+**Deployment URL:**
+```
+https://cyberstadium-ai-qujgvux22a-uc.a.run.app
+```
+
 **Chosen Vertical:**
 ```
 Smart Stadium Operations & Fan Experience Intelligence

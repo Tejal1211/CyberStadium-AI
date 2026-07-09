@@ -1,0 +1,8 @@
+
+FullName                                                                                                                      SizeMB
+--------                                                                                                                      ------
+C:\Users\Tejal\.gemini\antigravity\scratch\cyberstadium-ai\current.tgz                                                        816.97
+C:\Users\Tejal\.gemini\antigravity\scratch\cyberstadium-ai\node_modules\@next\swc-win32-x64-msvc\next-swc.win32-x64-msvc.node 130.53
+
+
+
